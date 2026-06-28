@@ -129,3 +129,18 @@ This is a capstone reference prototype, not a production deployment.
 - `SCENARIOS.md` — expected behavior by scenario
 - `FINAL_READINESS_CHECKLIST.md` — pre-upload checks
 - `SUBMISSION_EVIDENCE.md` — reviewer verification index and reproducibility evidence
+
+## Future Research Horizon: Lumei™ UCEA
+
+To overcome the residual gaps of reactive multi-turn validation, future development is directed toward the **Lumei™ Unified Context Engineering Architecture (UCEA)**. This framework shifts from runtime patching to an upstream cognitive operating system.
+
+<p align="center">
+  <img src="https://github.com/rujirawanich-visarut/BoardroomVoiceAgent/blob/main/Figure/Figure%20A.%20Lumei%20Unified%20Context%20Engineering%20Architecture%20(UCEA).png" alt="Lumei UCEA Architecture and Probabilistic Collapse" width="100%">
+</p>
+
+### The Core Mechanism: Probabilistic Collapse
+As visualized in the architecture diagram above, Lumei UCEA introduces a 6-layer transduction engine designed to systematically enforce variance reduction:
+1. **Linguistic Transduction (Layers 1-3):** Compresses raw, unstructured text into atomic entities and structural relations without premature semantic interpretation.
+2. **Deterministic Shielding (Layers 4-5):** Extracts deep intent and applies programmatic fact-checking gates equipped with the mathematical *Contradiction Density* ($\rho_c$) formula.
+3. **Rigid Output (Layer 6):** Collapses the stochastic nature of LLMs into an ironclad, execution-ready Testable Meaning Representation (TMR) payload.
+
