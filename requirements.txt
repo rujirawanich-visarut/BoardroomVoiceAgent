@@ -1,0 +1,2 @@
+# BoardroomVoiceAgent uses the Python standard library for the offline CLI.
+# Strict model-output parsing is implemented against src/schemas/evidence_schema.json.
