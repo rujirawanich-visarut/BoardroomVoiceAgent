@@ -1,0 +1,4 @@
+interface:
+  display_name: "OKF Format Foundation"
+  short_description: "Turn source material into portable OKF knowledge"
+  default_prompt: "Use $okf-format-foundation to propose three extraction lenses for this source, wait for my choice, and then create a portable OKF bundle."

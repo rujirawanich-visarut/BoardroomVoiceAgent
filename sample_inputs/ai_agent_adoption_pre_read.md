@@ -1,0 +1,1 @@
+Rapid AI Agent adoption across operations is expected to improve productivity. However, governance ownership, data access, human accountability, risk controls, and approval boundaries are not yet mature enough for broad deployment. Leadership requests direction on whether to proceed with broad deployment.

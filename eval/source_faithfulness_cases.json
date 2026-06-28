@@ -1,0 +1,57 @@
+[
+  {
+    "case_id": "custom_ai_governance_grounding",
+    "input_file": "sample_inputs/custom_pre_read.md",
+    "expected_decision_gravity": "High",
+    "expected_backpressure": true,
+    "expected_composition_route": "PASS",
+    "expected_option_count": 3,
+    "grounding_terms": ["productivity", "baseline", "governance", "halt rule", "targeted"],
+    "forbidden_output_terms": ["risk was fully mitigated", "we recommend choosing"],
+    "required_prior_terms": ["productivity acceleration"]
+  },
+  {
+    "case_id": "warehouse_grounding",
+    "input_file": "sample_inputs/warehouse_productivity_update.md",
+    "expected_decision_gravity": "Low",
+    "expected_backpressure": false,
+    "expected_composition_route": "PASS",
+    "expected_option_count": 0,
+    "grounding_terms": ["five percent", "layout change"],
+    "forbidden_output_terms": ["ai agent scaling", "human accountability boundaries"],
+    "required_prior_terms": ["warehouse layout"]
+  },
+  {
+    "case_id": "office_lease_grounding",
+    "input_file": "sample_inputs/office_lease_decision.md",
+    "expected_decision_gravity": "Medium",
+    "expected_backpressure": false,
+    "expected_composition_route": "PASS",
+    "expected_option_count": 2,
+    "grounding_terms": ["continuity", "three-month", "recurring rent"],
+    "forbidden_output_terms": ["ai agent scaling", "halt rules are not mature"],
+    "required_prior_terms": ["office lease"]
+  },
+  {
+    "case_id": "neutral_memo_grounding",
+    "input_file": "sample_inputs/neutral_informational_memo.md",
+    "expected_decision_gravity": "Low",
+    "expected_backpressure": false,
+    "expected_composition_route": "PASS",
+    "expected_option_count": 0,
+    "grounding_terms": ["99.9 percent", "priority incidents"],
+    "forbidden_output_terms": ["ai agent scaling", "governance exposure"],
+    "required_prior_terms": ["no executive decision"]
+  },
+  {
+    "case_id": "novel_three_option_grounding",
+    "input_file": "sample_inputs/novel_three_option_non_ai_decision.md",
+    "expected_decision_gravity": "High",
+    "expected_backpressure": false,
+    "expected_composition_route": "FALLBACK",
+    "expected_option_count": 3,
+    "grounding_terms": ["price increase", "renew the incumbent", "switch suppliers", "dual-source"],
+    "forbidden_output_terms": ["ai agent scaling", "we recommend choosing"],
+    "required_prior_terms": ["renewing the incumbent"]
+  }
+]

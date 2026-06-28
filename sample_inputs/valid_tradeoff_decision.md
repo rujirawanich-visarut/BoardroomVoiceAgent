@@ -1,0 +1,1 @@
+We must decide between extending the platform architecture or building a tactical patch. The platform costs $20M and takes 12 months. The patch costs $5M and takes 3 months. If we choose the patch, we accept high technical debt and risk system failure next year. If we choose the platform, we delay Q4 product launches. The board must allocate capital to one path today.

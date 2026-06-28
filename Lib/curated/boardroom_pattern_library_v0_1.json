@@ -1,0 +1,874 @@
+{
+  "library_id": "boardroomvoiceagent.patterns.v0_1",
+  "version": "0.1.0",
+  "status": "REVIEWED_EXPERIMENTAL",
+  "runtime_integration": false,
+  "purpose": "A source-bounded library of recurring executive decision structures for controlled evaluation and future integration.",
+  "knowledge_boundary": {
+    "may_do": [
+      "suggest evidence categories and executive questions",
+      "help distinguish recurring decision structures",
+      "help preserve options and articulate trade-offs",
+      "support evaluation of source-grounded reasoning"
+    ],
+    "must_not_do": [
+      "supply case facts absent from the current source",
+      "trigger backpressure from a pattern match alone",
+      "assign an accountability owner without evidence",
+      "select or recommend the final strategic pathway",
+      "be represented as active runtime behavior"
+    ],
+    "pattern_match_requirement": "At least two independent source anchors and no stronger competing interpretation.",
+    "backpressure_requirement": "A real decision or commitment request plus a critical missing or contradictory evidence, accountability, governance, financial, compliance, or safety boundary."
+  },
+  "status_lifecycle": [
+    "CANDIDATE",
+    "REVIEWED",
+    "ACTIVE",
+    "RETIRED"
+  ],
+  "external_framework_candidates": [
+    {
+      "source_id": "OECD-CG-2023",
+      "name": "G20/OECD Principles of Corporate Governance 2023",
+      "url": "https://www.oecd.org/corporate/principles-corporate-governance/",
+      "intended_use": "General governance and board oversight orientation.",
+      "verification_status": "OFFICIAL_URL_CANDIDATE_NOT_LIVE_VERIFIED_IN_THIS_RUN"
+    },
+    {
+      "source_id": "COSO-ERM",
+      "name": "COSO Enterprise Risk Management",
+      "url": "https://www.coso.org/guidance-erm",
+      "intended_use": "Risk, strategy, performance, and oversight orientation.",
+      "verification_status": "OFFICIAL_URL_CANDIDATE_NOT_LIVE_VERIFIED_IN_THIS_RUN"
+    },
+    {
+      "source_id": "NIST-AI-RMF",
+      "name": "NIST AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "intended_use": "AI governance and risk-management orientation.",
+      "verification_status": "OFFICIAL_URL_CANDIDATE_NOT_LIVE_VERIFIED_IN_THIS_RUN"
+    },
+    {
+      "source_id": "NIST-CSF-2",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "url": "https://www.nist.gov/cyberframework",
+      "intended_use": "Cyber governance and risk-management orientation.",
+      "verification_status": "OFFICIAL_URL_CANDIDATE_NOT_LIVE_VERIFIED_IN_THIS_RUN"
+    },
+    {
+      "source_id": "ISO-31000",
+      "name": "ISO 31000 Risk Management",
+      "url": "https://www.iso.org/iso-31000-risk-management.html",
+      "intended_use": "General risk-management orientation.",
+      "verification_status": "OFFICIAL_URL_CANDIDATE_NOT_LIVE_VERIFIED_IN_THIS_RUN"
+    },
+    {
+      "source_id": "OSHA-PSM",
+      "name": "OSHA Process Safety Management",
+      "url": "https://www.osha.gov/process-safety-management",
+      "intended_use": "Process-safety orientation only; jurisdiction-specific applicability must be verified.",
+      "verification_status": "OFFICIAL_URL_CANDIDATE_NOT_LIVE_VERIFIED_IN_THIS_RUN"
+    }
+  ],
+  "patterns": [
+    {
+      "pattern_id": "BRP-STRATEGY-01",
+      "canonical_name": "Strategic Pivot and Market Expansion",
+      "memorable_alias": "Sovereign Strategic Pivot",
+      "status": "REVIEWED",
+      "business_context": "A core growth thesis is weakening or a new market, product, or adjacency requires a material shift in attention and resources.",
+      "typical_forums": [
+        "Board",
+        "Executive Committee",
+        "Strategy Committee",
+        "Investment Committee"
+      ],
+      "decision_signals": [
+        "request to approve entry, exit, pivot, or material resource reallocation",
+        "evidence that the current growth thesis no longer explains observed performance",
+        "commitment to a new market before capability or demand assumptions are validated"
+      ],
+      "informational_signals": [
+        "market update without an approval request",
+        "early opportunity scan with no capital or operating commitment",
+        "scenario discussion explicitly described as exploratory"
+      ],
+      "prior_assumption_archetypes": [
+        "the current core can sustain the planned growth rate",
+        "the adjacency is reachable with existing capabilities",
+        "market entry can precede local operating readiness"
+      ],
+      "material_option_structures": [
+        "defend and optimize the core",
+        "shift materially toward the adjacency",
+        "stage a bounded entry while preserving exit options",
+        "defer commitment and gather discriminating evidence"
+      ],
+      "trade_off_structures": [
+        "near-term core economics versus future growth optionality",
+        "speed of entry versus evidence and capability maturity",
+        "focus versus portfolio diversification"
+      ],
+      "minimum_evidence_categories": [
+        "demand and competitive evidence",
+        "strategic fit and decision criteria",
+        "capability and operating-model readiness",
+        "financial range and downside exposure",
+        "reversibility and exit conditions"
+      ],
+      "common_missing_evidence": [
+        "no source-grounded reason the old growth thesis changed",
+        "no comparison between internal capability and entry requirements",
+        "no downside or exit condition",
+        "no criteria for shifting resources from the core"
+      ],
+      "accountability_questions": [
+        "Who owns the market thesis and its validation?",
+        "Who can stop or resize the commitment when assumptions fail?",
+        "Which forum owns capital reallocation across the core and adjacency?"
+      ],
+      "governance_safety_boundaries": [
+        "Do not present exploratory market signals as validated demand.",
+        "Do not treat a staged experiment as authorization for irreversible expansion."
+      ],
+      "backpressure_conditions": [
+        "A material entry or reallocation is requested but demand, capability, or downside assumptions needed for that commitment are unsupported.",
+        "The requested pivot is effectively irreversible and no accountability or exit boundary is defined."
+      ],
+      "decision_scope_potentially_supportable_now": [
+        "approve a bounded evidence-gathering step when its scope and learning criteria are explicit",
+        "align on decision criteria without selecting the final market pathway"
+      ],
+      "commitment_scope_not_yet_supportable": [
+        "full market commitment based only on exploratory signals",
+        "irreversible core resource withdrawal without downside analysis"
+      ],
+      "meeting_room_question_templates": [
+        "Which assumption about the core or the new market has changed enough to justify reallocating scarce attention and capital?",
+        "What evidence would distinguish a reversible learning step from an irreversible strategic pivot?"
+      ],
+      "one_line_decision_cue_template": "The decision is not whether the opportunity is attractive; it is how much of the current engine we are willing to put at risk before the new thesis is proven.",
+      "prohibited_inferences": [
+        "a large market automatically implies an attainable market",
+        "a staged option is risk-free",
+        "the agent may choose the winning market"
+      ],
+      "jurisdiction": "GENERAL_ENTERPRISE",
+      "confidence": "MEDIUM",
+      "provenance": {
+        "research_files": [
+          "Lib/Boardroom Decision Pattern Library (GPT).md",
+          "Lib/Boardroom Decision Pattern Library (GEM).md"
+        ],
+        "framework_candidates": [
+          "OECD-CG-2023",
+          "COSO-ERM"
+        ]
+      }
+    },
+    {
+      "pattern_id": "BRP-PORTFOLIO-02",
+      "canonical_name": "Portfolio, M&A, and Divestment",
+      "memorable_alias": "Portfolio Boundary Decision",
+      "status": "REVIEWED",
+      "business_context": "Executives must acquire, combine, retain, separate, or exit an asset or business under valuation, integration, regulatory, and timing uncertainty.",
+      "typical_forums": [
+        "Board",
+        "Investment Committee",
+        "Executive Committee",
+        "Audit or Risk Committee"
+      ],
+      "decision_signals": [
+        "request to sign, close, bid, divest, or terminate",
+        "approval of valuation range or transaction structure",
+        "acceptance of regulatory, integration, or stranded-cost exposure"
+      ],
+      "informational_signals": [
+        "target screening without transaction authority",
+        "portfolio performance review with no disposition request",
+        "status update on diligence already authorized"
+      ],
+      "prior_assumption_archetypes": [
+        "the asset is worth more inside the portfolio than outside it",
+        "synergies can be captured within the planned integration window",
+        "regulatory clearance and closing conditions are manageable"
+      ],
+      "material_option_structures": [
+        "proceed under the current structure",
+        "proceed with contingencies, staged ownership, or revised terms",
+        "defer pending discriminating evidence",
+        "exit the transaction or divestment path"
+      ],
+      "trade_off_structures": [
+        "deal speed versus diligence and conditional protection",
+        "strategic control versus capital and integration exposure",
+        "near-term transaction certainty versus long-term value capture"
+      ],
+      "minimum_evidence_categories": [
+        "strategic rationale and alternatives",
+        "valuation and sensitivity range",
+        "diligence findings and unresolved conditions",
+        "regulatory and contractual boundaries",
+        "integration, separation, and accountability plan"
+      ],
+      "common_missing_evidence": [
+        "synergy stated without owner, timing, or dependency",
+        "single-point valuation without downside range",
+        "regulatory condition treated as procedural rather than outcome-relevant",
+        "no cost or consequence of delay and exit"
+      ],
+      "accountability_questions": [
+        "Who owns each material synergy or separation obligation?",
+        "Who is authorized to renegotiate or stop before closing?",
+        "Which forum accepts residual regulatory and integration risk?"
+      ],
+      "governance_safety_boundaries": [
+        "Do not imply legal or regulatory clearance from commercial momentum.",
+        "Do not convert management enthusiasm into transaction certainty."
+      ],
+      "backpressure_conditions": [
+        "Signing or closing is requested while a material diligence, regulatory, valuation, or accountability boundary remains unresolved.",
+        "The transaction structure makes a major exposure irreversible before the stated condition is tested."
+      ],
+      "decision_scope_potentially_supportable_now": [
+        "approve bounded diligence or negotiation parameters",
+        "align on conditions that must be met before signing or closing"
+      ],
+      "commitment_scope_not_yet_supportable": [
+        "unconditional closing with unresolved material conditions",
+        "final valuation acceptance without a defensible range"
+      ],
+      "meeting_room_question_templates": [
+        "Which unresolved condition could change the transaction from value-creating to value-destructive?",
+        "What protection or stopping condition is required before commercial momentum becomes irreversible commitment?"
+      ],
+      "one_line_decision_cue_template": "The decision is not whether the transaction has strategic logic; it is which unresolved exposure the organization is willing to own to preserve timing and control.",
+      "prohibited_inferences": [
+        "management sponsorship proves synergy realization",
+        "commercial agreement implies regulatory approval",
+        "the agent may authorize or reject the transaction"
+      ],
+      "jurisdiction": "JURISDICTION_SPECIFIC_REVIEW_REQUIRED",
+      "confidence": "MEDIUM",
+      "provenance": {
+        "research_files": [
+          "Lib/Boardroom Decision Pattern Library (GPT).md",
+          "Lib/AI Wisdom Benchmark Design GEM.md"
+        ],
+        "framework_candidates": [
+          "OECD-CG-2023",
+          "COSO-ERM"
+        ]
+      }
+    },
+    {
+      "pattern_id": "BRP-CAPITAL-03",
+      "canonical_name": "Capital Project and Asset Reinvestment",
+      "memorable_alias": "Strategic Asset Reinvestment",
+      "status": "REVIEWED",
+      "business_context": "A major project, plant, platform, or aging asset requires investment, replacement, life extension, sequencing, or retirement.",
+      "typical_forums": [
+        "Board",
+        "Investment Committee",
+        "Executive Committee",
+        "Capital Committee"
+      ],
+      "decision_signals": [
+        "request to approve capital, phase-gate release, replacement, or retirement",
+        "material change in asset condition, project economics, or delivery risk",
+        "commitment that narrows future options or creates stranded exposure"
+      ],
+      "informational_signals": [
+        "routine asset-health update without funding authority",
+        "project progress report within an approved envelope",
+        "early concept screening before gate criteria are set"
+      ],
+      "prior_assumption_archetypes": [
+        "the asset can meet future requirements with normal maintenance",
+        "the project remains within the approved cost, schedule, and benefit thesis",
+        "replacement timing can be deferred without material reliability or value loss"
+      ],
+      "material_option_structures": [
+        "continue maintaining or life-extending the current asset",
+        "replace or reinvest at full scope",
+        "phase or modularize the commitment",
+        "retire, divest, or redesign the operating requirement"
+      ],
+      "trade_off_structures": [
+        "near-term cash protection versus reliability and future capacity",
+        "full-scope economics versus staged flexibility",
+        "speed versus design maturity and execution confidence"
+      ],
+      "minimum_evidence_categories": [
+        "asset condition or project baseline",
+        "cost, schedule, benefit, and sensitivity range",
+        "operational and safety consequences",
+        "alternatives including defer and retire",
+        "stage gates, owner, and stop conditions"
+      ],
+      "common_missing_evidence": [
+        "benefit estimate lacks baseline",
+        "maintenance and replacement options are not compared on the same horizon",
+        "no explicit consequence of deferral",
+        "no gate for releasing later irreversible spend"
+      ],
+      "accountability_questions": [
+        "Who owns the benefit case after capital approval?",
+        "Who controls scope changes and gate release?",
+        "Who can halt operation or execution when the boundary is breached?"
+      ],
+      "governance_safety_boundaries": [
+        "Do not treat sunk cost as evidence that the next tranche should proceed.",
+        "Do not infer safe continued operation from the absence of a recent incident."
+      ],
+      "backpressure_conditions": [
+        "Irreversible capital or continued operation is requested without a credible baseline, alternatives, or material safety boundary.",
+        "The decision depends on benefits or asset condition that cannot be traced to evidence."
+      ],
+      "decision_scope_potentially_supportable_now": [
+        "approve a bounded diagnostic, design, or early gate",
+        "align on criteria for full capital release"
+      ],
+      "commitment_scope_not_yet_supportable": [
+        "full release based on unbaselined benefits",
+        "continued high-consequence operation with an unresolved safety limit"
+      ],
+      "meeting_room_question_templates": [
+        "Which assumption about asset life, project economics, or future requirement has changed enough to alter the capital path?",
+        "What can be learned or protected through staging before the next irreversible commitment?"
+      ],
+      "one_line_decision_cue_template": "The decision is not only how much capital to spend; it is how much reliability, flexibility, and downside exposure the organization is willing to trade across time.",
+      "prohibited_inferences": [
+        "prior spend validates future spend",
+        "no recent failure means the asset boundary is safe",
+        "the agent may release capital"
+      ],
+      "jurisdiction": "GENERAL_ENTERPRISE_WITH_LOCAL_SAFETY_REVIEW",
+      "confidence": "HIGH",
+      "provenance": {
+        "research_files": [
+          "Lib/Boardroom Decision Pattern Library (GPT).md",
+          "Lib/Boardroom Decision Pattern Library (GEM).md"
+        ],
+        "framework_candidates": [
+          "COSO-ERM",
+          "ISO-31000"
+        ]
+      }
+    },
+    {
+      "pattern_id": "BRP-GROWTH-04",
+      "canonical_name": "Price, Volume, Growth, and Margin",
+      "memorable_alias": "Price-Volume Strategic Balancing",
+      "status": "REVIEWED",
+      "business_context": "Executives must respond to cost, demand, mix, pricing, or growth pressure when not all economic objectives can be protected simultaneously.",
+      "typical_forums": [
+        "Executive Committee",
+        "Board",
+        "Commercial Committee",
+        "Investment Committee"
+      ],
+      "decision_signals": [
+        "request to change price, discount, capacity, segment focus, or growth investment",
+        "evidence that margin or volume assumptions are structurally changing",
+        "approval of a commercial pilot or broad rollout"
+      ],
+      "informational_signals": [
+        "periodic sales or margin update with no policy request",
+        "market research readout before a commercial decision",
+        "variance explanation within an approved commercial plan"
+      ],
+      "prior_assumption_archetypes": [
+        "cost pressure is temporary and can be absorbed",
+        "volume will remain stable through a price change",
+        "growth can be funded without material margin dilution"
+      ],
+      "material_option_structures": [
+        "protect margin through price, mix, or discount discipline",
+        "protect volume through selective absorption or investment",
+        "run a bounded segment or channel pilot",
+        "redesign the offer or cost-to-serve"
+      ],
+      "trade_off_structures": [
+        "margin versus volume",
+        "short-term share versus price integrity",
+        "broad rollout speed versus segment-level learning"
+      ],
+      "minimum_evidence_categories": [
+        "price-volume and contribution baseline",
+        "customer and segment elasticity evidence",
+        "competitive response and switching risk",
+        "cost-to-serve and capacity implications",
+        "pilot measures and rollback conditions"
+      ],
+      "common_missing_evidence": [
+        "average economics hide segment differences",
+        "benefit stated without customer behavior evidence",
+        "no measure of cannibalization or discount leakage",
+        "no distinction between pilot and enterprise-wide commitment"
+      ],
+      "accountability_questions": [
+        "Who owns the price-volume thesis by segment?",
+        "Who monitors unintended discount or churn effects?",
+        "Who can stop or resize a rollout when pilot conditions fail?"
+      ],
+      "governance_safety_boundaries": [
+        "Do not claim that margin and volume can both be fully protected when the source shows a constrained cost curve.",
+        "Do not generalize a pilot result beyond the measured segment without evidence."
+      ],
+      "backpressure_conditions": [
+        "A broad commercial commitment is requested without a baseline or evidence about customer response that is critical to the decision.",
+        "The proposed framing hides an unavoidable economic trade-off."
+      ],
+      "decision_scope_potentially_supportable_now": [
+        "approve a bounded, measurable pilot",
+        "align on segment-level decision criteria and guardrails"
+      ],
+      "commitment_scope_not_yet_supportable": [
+        "enterprise-wide rollout from untested average assumptions",
+        "claiming a win-win without source-grounded economics"
+      ],
+      "meeting_room_question_templates": [
+        "Which customer or segment behavior would prove that the current price-volume assumption no longer holds?",
+        "What are we willing to sacrifice—margin, volume, speed, or scope—and where should that sacrifice be bounded?"
+      ],
+      "one_line_decision_cue_template": "The decision is not whether growth and margin both matter; it is which economic objective can be protected now and which risk must be explicitly owned.",
+      "prohibited_inferences": [
+        "average demand represents every segment",
+        "a price move has no behavioral consequence",
+        "the agent may set commercial policy"
+      ],
+      "jurisdiction": "GENERAL_ENTERPRISE",
+      "confidence": "HIGH",
+      "provenance": {
+        "research_files": [
+          "Lib/Boardroom Decision Pattern Library (GPT).md",
+          "Lib/Decision Evidence (GPT).md"
+        ],
+        "framework_candidates": [
+          "COSO-ERM"
+        ]
+      }
+    },
+    {
+      "pattern_id": "BRP-SUPPLY-05",
+      "canonical_name": "Supply Chain Resilience",
+      "memorable_alias": "Resilience Concentration Choice",
+      "status": "REVIEWED",
+      "business_context": "The organization must balance cost, service, concentration, inventory, supplier commitment, and recovery capability under disruption risk.",
+      "typical_forums": [
+        "Executive Committee",
+        "Board",
+        "Risk Committee",
+        "Operations or Procurement Committee"
+      ],
+      "decision_signals": [
+        "request to approve sole-source, dual-source, inventory, localization, or long-term commitment",
+        "material disruption changes the reliability assumption",
+        "cost advantage depends on concentration or reduced redundancy"
+      ],
+      "informational_signals": [
+        "supplier performance update without a sourcing decision",
+        "scenario exercise with no contract or inventory request",
+        "routine service-level reporting"
+      ],
+      "prior_assumption_archetypes": [
+        "the lowest-cost source is sufficiently reliable",
+        "inventory and recovery capacity can absorb disruption",
+        "supplier concentration does not create material strategic exposure"
+      ],
+      "material_option_structures": [
+        "retain concentrated supply and accept exposure",
+        "qualify or contract a second source",
+        "build inventory or recovery buffers",
+        "redesign product, network, or demand to reduce dependency"
+      ],
+      "trade_off_structures": [
+        "unit cost versus resilience",
+        "supplier commitment versus switching flexibility",
+        "working capital versus continuity protection"
+      ],
+      "minimum_evidence_categories": [
+        "dependency and concentration map",
+        "time-to-recover and service consequence",
+        "alternative-source feasibility and lead time",
+        "inventory and working-capital impact",
+        "contractual obligations and exit conditions"
+      ],
+      "common_missing_evidence": [
+        "no quantified or bounded disruption consequence",
+        "second-source option named without qualification lead time",
+        "inventory buffer treated as equivalent to structural resilience",
+        "contract commitment lacks exit or failure condition"
+      ],
+      "accountability_questions": [
+        "Who owns the concentration risk and recovery plan?",
+        "Who can activate alternate supply or inventory release?",
+        "Which forum accepts the residual service and cost exposure?"
+      ],
+      "governance_safety_boundaries": [
+        "Do not infer resilience from historical supplier performance alone.",
+        "Do not present an unqualified alternate supplier as immediately available capacity."
+      ],
+      "backpressure_conditions": [
+        "A long-term or exclusive commitment is requested while recovery, alternative capacity, or exit boundaries critical to continuity are unknown.",
+        "The decision creates material operational or safety exposure with no accountable response owner."
+      ],
+      "decision_scope_potentially_supportable_now": [
+        "approve supplier qualification or a bounded resilience test",
+        "align on acceptable concentration and recovery criteria"
+      ],
+      "commitment_scope_not_yet_supportable": [
+        "exclusive commitment without recovery and exit evidence",
+        "claiming continuity protection from an untested alternative"
+      ],
+      "meeting_room_question_templates": [
+        "What disruption duration or service consequence would make the current cost advantage unacceptable?",
+        "Which resilience mechanism buys real recovery capacity rather than the appearance of redundancy?"
+      ],
+      "one_line_decision_cue_template": "The decision is not whether concentration lowers cost; it is how much continuity risk the organization is willing to own for that advantage.",
+      "prohibited_inferences": [
+        "past reliability proves future continuity",
+        "inventory alone eliminates structural dependency",
+        "the agent may select the supplier"
+      ],
+      "jurisdiction": "GENERAL_ENTERPRISE_WITH_CONTRACT_REVIEW",
+      "confidence": "HIGH",
+      "provenance": {
+        "research_files": [
+          "Lib/Boardroom Decision Pattern Library (GPT).md",
+          "Lib/AI Wisdom Benchmark Design GEM.md"
+        ],
+        "framework_candidates": [
+          "COSO-ERM",
+          "ISO-31000"
+        ]
+      }
+    },
+    {
+      "pattern_id": "BRP-SAFETY-06",
+      "canonical_name": "Safety and License-to-Operate",
+      "memorable_alias": "Safety-Critical Stand-down",
+      "status": "REVIEWED",
+      "business_context": "Operational continuity, production, or project timing collides with a material safety, environmental, regulatory, or community boundary.",
+      "typical_forums": [
+        "Board",
+        "Risk Committee",
+        "Executive Committee",
+        "Operations or Safety Committee"
+      ],
+      "decision_signals": [
+        "request to continue, restart, suspend, or expand high-consequence operation",
+        "breach or near-breach of a safety, environmental, permit, or community condition",
+        "production or schedule pressure conflicts with a stated operating boundary"
+      ],
+      "informational_signals": [
+        "routine safety performance update with no operating decision",
+        "closed incident review with no unresolved boundary",
+        "training or assurance update within approved controls"
+      ],
+      "prior_assumption_archetypes": [
+        "existing controls are sufficient for the planned operating envelope",
+        "the event is isolated rather than evidence of a systemic weakness",
+        "production can continue while remediation occurs"
+      ],
+      "material_option_structures": [
+        "continue within a verified safe boundary",
+        "reduce rate or scope under temporary controls",
+        "stand down until specified evidence or remediation exists",
+        "redesign or retire the hazardous activity"
+      ],
+      "trade_off_structures": [
+        "production continuity versus safety or license integrity",
+        "temporary control versus permanent remediation",
+        "speed of restart versus verification confidence"
+      ],
+      "minimum_evidence_categories": [
+        "hazard, consequence, and operating-boundary evidence",
+        "control effectiveness and independent verification",
+        "regulatory, permit, and community implications",
+        "restart, monitoring, and halt criteria",
+        "named human authority for operation and stop-work"
+      ],
+      "common_missing_evidence": [
+        "root cause or hazard boundary remains unresolved",
+        "temporary control lacks effectiveness evidence",
+        "restart authority and halt criteria are unclear",
+        "production impact is quantified but safety consequence is not"
+      ],
+      "accountability_questions": [
+        "Who has authority to continue, reduce, restart, and stop?",
+        "Who independently verifies that the boundary is restored?",
+        "Which accountable forum accepts residual risk?"
+      ],
+      "governance_safety_boundaries": [
+        "Safety and regulatory applicability must be verified in the operating jurisdiction.",
+        "The agent must not authorize operation, restart, or risk acceptance."
+      ],
+      "backpressure_conditions": [
+        "Continuation or restart is requested while a material safety, environmental, permit, or stop-work boundary is unresolved.",
+        "Human authority for accepting, monitoring, or halting the exposure is unclear."
+      ],
+      "decision_scope_potentially_supportable_now": [
+        "approve evidence gathering, independent verification, or bounded remediation",
+        "define the conditions an accountable human forum must verify before restart"
+      ],
+      "commitment_scope_not_yet_supportable": [
+        "continue or restart beyond a verified operating boundary",
+        "accept residual high-consequence risk without accountable human authority"
+      ],
+      "meeting_room_question_templates": [
+        "What evidence and accountable authority are required before operation can remain within a defensible boundary?",
+        "Which production consequence are we prepared to accept rather than normalize an unresolved safety or license-to-operate exposure?"
+      ],
+      "one_line_decision_cue_template": "The decision is not whether continuity has value; it is whether that value can be pursued without crossing an unresolved safety or license-to-operate boundary.",
+      "prohibited_inferences": [
+        "absence of injury proves the boundary is acceptable",
+        "temporary controls guarantee safe operation",
+        "the agent may approve restart or risk acceptance"
+      ],
+      "jurisdiction": "JURISDICTION_AND_SITE_SPECIFIC_REVIEW_REQUIRED",
+      "confidence": "HIGH_FOR_STRUCTURE_LOW_FOR_LOCAL_RULES",
+      "provenance": {
+        "research_files": [
+          "Lib/Boardroom Decision Pattern Library (GEM).md",
+          "Lib/Auditing Boardroom Decision Patterns (GEM).md",
+          "Lib/AI Wisdom Benchmark Design GEM.md"
+        ],
+        "framework_candidates": [
+          "ISO-31000",
+          "OSHA-PSM"
+        ]
+      }
+    },
+    {
+      "pattern_id": "BRP-TECH-07",
+      "canonical_name": "Technology, AI, Data, and Cyber Governance",
+      "memorable_alias": "Autonomous Systems Boundary",
+      "status": "REVIEWED",
+      "business_context": "Technology capability, AI autonomy, data access, or cyber exposure changes how work is executed, trusted, monitored, or governed.",
+      "typical_forums": [
+        "Board",
+        "Risk Committee",
+        "Executive Committee",
+        "Technology or Data Governance Committee"
+      ],
+      "decision_signals": [
+        "request to scale, deploy, connect, automate, or expand data access",
+        "system moves from retrieval or analysis toward recommending or executing action",
+        "technology investment changes material operating or accountability boundaries"
+      ],
+      "informational_signals": [
+        "technology landscape update with no deployment request",
+        "proof-of-concept result without authority to scale",
+        "cyber or data awareness update with no control decision"
+      ],
+      "prior_assumption_archetypes": [
+        "the technology is primarily a productivity or infrastructure initiative",
+        "human review is sufficient to contain automated error",
+        "existing data access and control models extend safely to the new use case"
+      ],
+      "material_option_structures": [
+        "scale broadly under the proposed operating model",
+        "delay until specified controls mature",
+        "run bounded low-risk or low-autonomy pilots with explicit governance",
+        "redesign the use case to reduce operative agency or data exposure"
+      ],
+      "trade_off_structures": [
+        "speed and value capture versus control and auditability",
+        "autonomy versus human accountability",
+        "data breadth versus confidentiality and purpose limitation",
+        "feature velocity versus resilience and technical debt"
+      ],
+      "minimum_evidence_categories": [
+        "use-case value baseline and auditable measure",
+        "data access, confidentiality, quality, and lineage",
+        "degree of evaluative and operative agency",
+        "human approval, monitoring, escalation, and halt rules",
+        "error, misuse, cyber, and recovery scenarios"
+      ],
+      "common_missing_evidence": [
+        "productivity claim lacks a baseline",
+        "decision support and autonomous action are not distinguished",
+        "accountability for wrong or stale output is unclear",
+        "data classes, approvals, monitoring, and halt rules are undefined"
+      ],
+      "accountability_questions": [
+        "Who owns the use-case outcome and residual risk?",
+        "Who approves access, monitors output, updates knowledge, and can halt the system?",
+        "Where must a human remain the accountable decision maker?"
+      ],
+      "governance_safety_boundaries": [
+        "Do not infer production readiness from platform readiness.",
+        "Do not treat a human in the workflow as effective oversight without authority, information, and time to intervene.",
+        "The agent must not approve deployment, data access, or autonomy."
+      ],
+      "backpressure_conditions": [
+        "Scale or material autonomy is requested while accountability, data access, monitoring, or halt boundaries critical to the use case are missing.",
+        "A high-consequence use case is requested without a defensible human control and recovery path."
+      ],
+      "decision_scope_potentially_supportable_now": [
+        "approve bounded low-risk learning with explicit access, monitoring, and halt boundaries",
+        "align on autonomy tiers and the evidence required for each tier"
+      ],
+      "commitment_scope_not_yet_supportable": [
+        "broad autonomous deployment without accountability and halt ownership",
+        "unbounded cross-domain data access",
+        "claims of ROI without a credible baseline"
+      ],
+      "meeting_room_question_templates": [
+        "What level of autonomy and data access are we willing to scale now, given the maturity of accountability, evidence, monitoring, and halt rules?",
+        "Which value can be learned through a bounded use case without silently changing the operating model?"
+      ],
+      "one_line_decision_cue_template": "The decision is not whether the technology can create value; it is how much agency and exposure the organization can responsibly scale before its governance is ready.",
+      "prohibited_inferences": [
+        "technical availability equals organizational readiness",
+        "a human review step automatically guarantees accountability",
+        "the agent may approve deployment or select the autonomy level"
+      ],
+      "jurisdiction": "USE_CASE_AND_JURISDICTION_SPECIFIC_REVIEW_REQUIRED",
+      "confidence": "HIGH_FOR_STRUCTURE_MEDIUM_FOR_DOMAIN_APPLICATION",
+      "provenance": {
+        "research_files": [
+          "Lib/Boardroom Decision Pattern Library (GPT).md",
+          "Lib/Boardroom Decision Pattern Library (GEM).md",
+          "Lib/Auditing Boardroom Decision Patterns (GEM).md",
+          "Lib/Decision Evidence (GPT).md"
+        ],
+        "framework_candidates": [
+          "NIST-AI-RMF",
+          "NIST-CSF-2",
+          "OECD-CG-2023"
+        ]
+      }
+    },
+    {
+      "pattern_id": "BRP-ORG-08",
+      "canonical_name": "Operating Model and Transformation Phasing",
+      "memorable_alias": "Transformation Transition-Lag Decision",
+      "status": "REVIEWED",
+      "business_context": "A restructuring, shared-service move, platform transformation, or new operating model changes authority, capability, sequencing, and business continuity.",
+      "typical_forums": [
+        "Board",
+        "Executive Committee",
+        "Transformation Steering Committee",
+        "People or Technology Committee"
+      ],
+      "decision_signals": [
+        "request to approve target operating model, phase, funding, or organization change",
+        "benefit realization depends on authority, process, data, and behavior changing together",
+        "transition risk or dual-running cost becomes material"
+      ],
+      "informational_signals": [
+        "transformation progress update within an approved phase",
+        "organization health review without redesign authority",
+        "future-state concept discussion with no commitment request"
+      ],
+      "prior_assumption_archetypes": [
+        "technology or organization design is the primary constraint",
+        "benefits will arrive as soon as the new structure or platform goes live",
+        "the business can absorb transition and dual-running load without material performance loss"
+      ],
+      "material_option_structures": [
+        "move rapidly to the target model",
+        "phase by capability, business unit, or process",
+        "run a bounded parallel model before migration",
+        "redesign scope or defer until prerequisites are met"
+      ],
+      "trade_off_structures": [
+        "transformation speed versus continuity and adoption",
+        "central consistency versus local responsiveness",
+        "early benefit ambition versus transition capacity",
+        "feature delivery versus technical debt and resilience"
+      ],
+      "minimum_evidence_categories": [
+        "problem and benefit baseline",
+        "decision rights and accountability map",
+        "capability, capacity, and adoption readiness",
+        "dependency, sequencing, and dual-running burden",
+        "phase gates, measures, and rollback conditions"
+      ],
+      "common_missing_evidence": [
+        "target chart is presented without decision rights",
+        "benefits are not tied to changed behavior or process",
+        "transition capacity and dual-running load are absent",
+        "phase gates measure activity rather than outcome"
+      ],
+      "accountability_questions": [
+        "Who owns the business outcome rather than the implementation activity?",
+        "Who resolves cross-functional decision-right conflicts?",
+        "Who can pause or resize a phase when continuity or adoption conditions fail?"
+      ],
+      "governance_safety_boundaries": [
+        "Do not infer operating-model readiness from technical go-live readiness.",
+        "Do not present a reporting-line change as a complete accountability model."
+      ],
+      "backpressure_conditions": [
+        "A major operating-model or transformation commitment is requested while decision rights, transition capacity, or business-continuity boundaries are critically unclear.",
+        "Benefits required to justify the commitment have no source-grounded baseline or accountable owner."
+      ],
+      "decision_scope_potentially_supportable_now": [
+        "approve a bounded phase with explicit outcome and stop criteria",
+        "align on decision rights and prerequisites before full migration"
+      ],
+      "commitment_scope_not_yet_supportable": [
+        "enterprise-wide migration without transition and accountability evidence",
+        "benefit commitment based only on implementation milestones"
+      ],
+      "meeting_room_question_templates": [
+        "Which operating constraint—not merely which technology or reporting line—must change for the benefit to exist?",
+        "What phase boundary protects continuity while still generating evidence that the target model works?"
+      ],
+      "one_line_decision_cue_template": "The decision is not only what the future model should be; it is how much transition load and continuity risk the organization can absorb while reaching it.",
+      "prohibited_inferences": [
+        "go-live equals benefit realization",
+        "an organization chart defines accountability",
+        "the agent may choose the target operating model"
+      ],
+      "jurisdiction": "GENERAL_ENTERPRISE_WITH_LOCAL_EMPLOYMENT_REVIEW",
+      "confidence": "HIGH",
+      "provenance": {
+        "research_files": [
+          "Lib/Boardroom Decision Pattern Library (GPT).md",
+          "Lib/Boardroom Decision Pattern Library (GEM).md",
+          "Lib/AI Wisdom Benchmark Design GEM.md"
+        ],
+        "framework_candidates": [
+          "OECD-CG-2023",
+          "COSO-ERM"
+        ]
+      }
+    }
+  ],
+  "experimental_candidates": [
+    {
+      "candidate_id": "BRC-TAX-01",
+      "name": "Vertically Integrated Value and Transfer-Pricing Visibility",
+      "memorable_alias": "Internal Value Leakage",
+      "status": "CANDIDATE",
+      "reason_held": "Promising management-accounting structure, but tax, legal, and jurisdictional boundaries require authoritative specialist review before it becomes an active pattern. A public regression case may still test source-faithful framing without asserting tax rules."
+    },
+    {
+      "candidate_id": "BRC-GOV-02",
+      "name": "Related-Party Transaction Oversight",
+      "memorable_alias": "Conflict Firewall",
+      "status": "CANDIDATE",
+      "reason_held": "Material governance pattern with strong jurisdiction and listing-rule dependence; requires primary-source validation and careful conflict-of-interest boundaries."
+    },
+    {
+      "candidate_id": "BRC-TECH-03",
+      "name": "Technical Debt versus Feature Velocity",
+      "memorable_alias": "Resilience Debt Choice",
+      "status": "CANDIDATE",
+      "reason_held": "Useful sub-pattern already represented inside technology and transformation families; held separately until evidence shows that independent routing improves quality rather than taxonomy size."
+    },
+    {
+      "candidate_id": "BRC-WORKFORCE-04",
+      "name": "Workforce Capacity, Automation, and Social Transition",
+      "memorable_alias": "Human Capacity Reallocation",
+      "status": "CANDIDATE",
+      "reason_held": "High-value real-world pattern, but requires stronger labor, employment, inclusion, and jurisdiction-specific evidence than the current research pack provides."
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Read okf-format-foundation/SKILL.md completely and follow it for this task. Inspect my source, propose three meaningfully different extraction lenses, disclose each lens's blind spot, and wait for me to confirm the lens and target path before writing an OKF bundle.

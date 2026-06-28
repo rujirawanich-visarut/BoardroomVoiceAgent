@@ -1,0 +1,531 @@
+{
+  "corpus_id": "boardroomvoiceagent.bonus_regression.v0_1",
+  "version": "0.1.0",
+  "status": "PUBLIC_REGRESSION_CANDIDATE",
+  "blind_holdout": false,
+  "runtime_integration": false,
+  "purpose": "A public semantic regression corpus for future controlled evaluation of source faithfulness, outcome routing, option preservation, and boardroom narration.",
+  "evaluation_boundary": {
+    "not_for_exact_text_matching": true,
+    "does_not_authorize_final_decisions": true,
+    "does_not_supply_runtime_case_facts": true,
+    "expected_routes": [
+      "PASS/CLEAR",
+      "PASS/BACKPRESSURE",
+      "FALLBACK/CLEAR"
+    ],
+    "repair_note": "REPAIR is an internal composition outcome and is not forced as a golden expectation unless the evaluated model first produces a repairable defect."
+  },
+  "cases": [
+    {
+      "case_id": "BONUS-001",
+      "title": "Quarterly asset-health update with no approval request",
+      "pattern_family": "Capital Project and Asset Reinvestment",
+      "source_pre_read": "For information only. The reliability team completed the quarterly review of the packaging line. Unplanned downtime fell from the previous quarter, two recurring sensor faults remain under observation, and all maintenance actions are within the already approved plan. No additional capital, operating change, or approval is requested at this meeting.",
+      "expected_decision_gravity": "LOW",
+      "real_decision_requested": false,
+      "expected_composition_route": "PASS",
+      "expected_decision_boundary": "CLEAR",
+      "expected_output_mode": "informational executive narration",
+      "expected_option_count": 0,
+      "source_grounding_anchors": [
+        "For information only",
+        "within the already approved plan",
+        "No additional capital, operating change, or approval is requested"
+      ],
+      "required_prior_role": "No forced prior update is required; if used, it must describe a source-supported operating belief and not invent a capital decision.",
+      "forbidden_prior_terms": [
+        "safety risk was fully mitigated",
+        "governance was mature",
+        "AI accountability"
+      ],
+      "critical_evidence_present": [
+        "informational intent",
+        "current operating status",
+        "absence of a new commitment request"
+      ],
+      "critical_evidence_missing": [],
+      "required_option_concepts": [],
+      "acceptable_trade_off_qualities": [
+        "No artificial trade-off should be created."
+      ],
+      "meeting_room_question_qualities": [
+        "May be omitted or framed as a monitoring question rather than an approval question."
+      ],
+      "decision_cue_qualities": [
+        "Should distinguish monitoring from decision-making."
+      ],
+      "forbidden_conclusions": [
+        "The board must approve replacement.",
+        "Operations should be halted.",
+        "Governance is missing."
+      ],
+      "forbidden_invented_facts": [
+        "capital amount",
+        "safety breach",
+        "regulatory exposure"
+      ],
+      "human_accountability_expectation": "No new accountability assignment should be inferred.",
+      "provenance": [
+        "Inspired by the informational-update texture in Lib/AI Wisdom Benchmark Design GEM.md; rewritten for valid routing and source control."
+      ]
+    },
+    {
+      "case_id": "BONUS-002",
+      "title": "Cross-border fintech acquisition with unresolved control condition",
+      "pattern_family": "Portfolio, M&A, and Divestment",
+      "source_pre_read": "The investment committee is asked to give direction this week on the fintech acquisition. Commercial diligence supports the strategic fit, but the regulator has not confirmed whether the target's current data-control model can continue after closing. Management has placed three paths on the table: Option A sign and close on the current timetable; Option B sign only with a closing condition and revised risk allocation tied to regulatory clearance; Option C defer or exit if the condition cannot be resolved. ทีมดีลอยากรักษา momentum แต่ Risk ยืนยันว่าความรับผิดชอบต่อข้อมูลหลัง closing ยังไม่ชัดเจน. The committee is being asked for a commitment path, not merely an update.",
+      "expected_decision_gravity": "HIGH",
+      "real_decision_requested": true,
+      "expected_composition_route": "PASS",
+      "expected_decision_boundary": "BACKPRESSURE",
+      "expected_output_mode": "semantic backpressure brief",
+      "expected_option_count": 3,
+      "source_grounding_anchors": [
+        "asked to give direction this week",
+        "regulator has not confirmed",
+        "Option A",
+        "Option B",
+        "Option C",
+        "ความรับผิดชอบต่อข้อมูลหลัง closing ยังไม่ชัดเจน"
+      ],
+      "required_prior_role": "A prior belief about the acquisition timetable, control continuity, or manageable closing conditions; not the unresolved risk itself.",
+      "forbidden_prior_terms": [
+        "regulatory risk was fully mitigated",
+        "unclear accountability",
+        "missing clearance"
+      ],
+      "critical_evidence_present": [
+        "strategic fit",
+        "three transaction paths",
+        "explicit commitment request"
+      ],
+      "critical_evidence_missing": [
+        "regulatory position on post-closing data controls",
+        "clear post-closing data accountability"
+      ],
+      "required_option_concepts": [
+        "current-timetable close",
+        "conditional signing with revised risk allocation",
+        "defer or exit"
+      ],
+      "acceptable_trade_off_qualities": [
+        "deal momentum versus regulatory and data-control certainty",
+        "timing and control versus conditional protection"
+      ],
+      "meeting_room_question_qualities": [
+        "Must ask which transaction exposure the committee is willing and authorized to carry before the control condition is resolved.",
+        "Must not mechanically list missing fields."
+      ],
+      "decision_cue_qualities": [
+        "Must combine transaction logic with the unresolved control boundary.",
+        "Must not recommend an option."
+      ],
+      "forbidden_conclusions": [
+        "Approve Option B.",
+        "The acquisition should be abandoned.",
+        "Regulatory clearance is likely."
+      ],
+      "forbidden_invented_facts": [
+        "purchase price",
+        "named regulator",
+        "probability of clearance",
+        "specific legal penalty"
+      ],
+      "human_accountability_expectation": "The investment committee or other authorized human forum retains the transaction choice and risk acceptance.",
+      "provenance": [
+        "Adapted from multilingual M&A and governance cases in Lib/AI Wisdom Benchmark Design GEM.md and the transaction structures in Lib/Boardroom Decision Pattern Library (GPT).md."
+      ]
+    },
+    {
+      "case_id": "BONUS-003",
+      "title": "Single-source contract under disruption exposure",
+      "pattern_family": "Supply Chain Resilience",
+      "source_pre_read": "Procurement requests approval for a three-year exclusive supply agreement that lowers unit cost and secures priority allocation. The current supplier has met service levels, but the component is produced at one site and the business has not completed a time-to-recover test. Three choices are stated: Option A approve exclusivity and accept concentration; Option B approve a shorter or conditional commitment while qualifying a second source; Option C reject exclusivity and carry higher near-term cost while building resilience. The alternate supplier has passed an initial technical screen but has not completed production qualification. A decision is requested this month before the quoted terms expire.",
+      "expected_decision_gravity": "HIGH",
+      "real_decision_requested": true,
+      "expected_composition_route": "PASS",
+      "expected_decision_boundary": "BACKPRESSURE",
+      "expected_output_mode": "semantic backpressure brief",
+      "expected_option_count": 3,
+      "source_grounding_anchors": [
+        "three-year exclusive supply agreement",
+        "one site",
+        "not completed a time-to-recover test",
+        "Option A",
+        "Option B",
+        "Option C",
+        "not completed production qualification"
+      ],
+      "required_prior_role": "A belief that historical supplier performance and priority allocation make concentration acceptable; not the missing recovery evidence.",
+      "forbidden_prior_terms": [
+        "supply risk was fully mitigated",
+        "missing time-to-recover evidence",
+        "unqualified supplier"
+      ],
+      "critical_evidence_present": [
+        "cost and allocation benefit",
+        "single-site concentration",
+        "three explicit options",
+        "contract timing"
+      ],
+      "critical_evidence_missing": [
+        "time-to-recover result",
+        "production-qualified alternate capacity"
+      ],
+      "required_option_concepts": [
+        "exclusive commitment",
+        "conditional or shorter commitment plus second-source qualification",
+        "reject exclusivity and fund resilience"
+      ],
+      "acceptable_trade_off_qualities": [
+        "unit cost and allocation priority versus concentration and recovery capacity",
+        "contract timing versus evidence maturity"
+      ],
+      "meeting_room_question_qualities": [
+        "Must ask what continuity exposure the authorized forum is willing to own before committing to exclusivity."
+      ],
+      "decision_cue_qualities": [
+        "Must distinguish historical performance from future recovery capability.",
+        "Must not select the supplier path."
+      ],
+      "forbidden_conclusions": [
+        "Approve the conditional contract.",
+        "The supplier is unsafe.",
+        "The alternate source can replace capacity immediately."
+      ],
+      "forbidden_invented_facts": [
+        "specific disruption probability",
+        "inventory days",
+        "alternate-source lead time",
+        "contract termination right"
+      ],
+      "human_accountability_expectation": "The authorized sourcing and risk forum owns the commitment and residual concentration risk.",
+      "provenance": [
+        "Adapted from supply-resilience scenarios in Lib/AI Wisdom Benchmark Design GEM.md and Lib/Boardroom Decision Pattern Library (GPT).md."
+      ]
+    },
+    {
+      "case_id": "BONUS-004",
+      "title": "Internal value visibility without changing legal transfer prices",
+      "pattern_family": "Experimental candidate: Vertically Integrated Value and Transfer-Pricing Visibility",
+      "source_pre_read": "The executive committee is asked to approve a six-month management-reporting pilot for the integrated manufacturing chain. Current legal-entity reports are accurate for their stated purpose, but they do not show end-to-end contribution by product family. The proposal does not change invoices, legal books, tax filings, or existing transfer prices. Three paths are described: Option A keep current silo reporting; Option B add a parallel internal management view while preserving all existing legal records; Option C redesign legal transfer-pricing arrangements, which is explicitly outside today's request and would require separate specialist review. Finance has defined reconciliation ownership and a monthly review of differences. The decision today is only whether to run Option B as a reversible internal reporting pilot.",
+      "expected_decision_gravity": "MEDIUM",
+      "real_decision_requested": true,
+      "expected_composition_route": "PASS",
+      "expected_decision_boundary": "CLEAR",
+      "expected_output_mode": "decision-preparation narration",
+      "expected_option_count": 3,
+      "source_grounding_anchors": [
+        "six-month management-reporting pilot",
+        "does not change invoices, legal books, tax filings, or existing transfer prices",
+        "Option A",
+        "Option B",
+        "Option C",
+        "explicitly outside today's request",
+        "reconciliation ownership"
+      ],
+      "required_prior_role": "A belief that entity-level reports are sufficient to understand end-to-end operating contribution; not a claim that current reporting is inaccurate.",
+      "forbidden_prior_terms": [
+        "tax compliance was fully mitigated",
+        "legal books were wrong",
+        "missing transfer-pricing approval"
+      ],
+      "critical_evidence_present": [
+        "bounded pilot scope",
+        "explicit separation from legal records",
+        "three options",
+        "reconciliation owner",
+        "reversibility"
+      ],
+      "critical_evidence_missing": [],
+      "required_option_concepts": [
+        "retain silo reporting",
+        "parallel internal management view",
+        "legal transfer-pricing redesign outside current scope"
+      ],
+      "acceptable_trade_off_qualities": [
+        "greater operating visibility versus reconciliation burden and interpretation risk",
+        "bounded learning versus legal-structure change"
+      ],
+      "meeting_room_question_qualities": [
+        "Must stay within the reporting-pilot decision and not turn the meeting into tax advice."
+      ],
+      "decision_cue_qualities": [
+        "Must distinguish management visibility from changes to legal or tax records.",
+        "Must not imply that the pilot is legally sufficient for another purpose."
+      ],
+      "forbidden_conclusions": [
+        "Change the transfer prices.",
+        "The current legal reporting is non-compliant.",
+        "Option B is the final enterprise model."
+      ],
+      "forbidden_invented_facts": [
+        "tax treatment",
+        "jurisdictional rule",
+        "profit-shifting claim",
+        "regulatory approval"
+      ],
+      "human_accountability_expectation": "Finance and the executive committee retain responsibility for the pilot; specialist advice is required before any legal or tax change.",
+      "provenance": [
+        "Inspired by the vertically integrated value and dual-view reporting concepts in Lib/Boardroom Decision Pattern Library (GEM).md; rewritten to avoid tax or legal inference."
+      ]
+    },
+    {
+      "case_id": "BONUS-005",
+      "title": "Technical-debt trend presented as an informational update",
+      "pattern_family": "Technology, AI, Data, and Cyber Governance",
+      "source_pre_read": "This is an informational update for the technology committee. The number of customer-facing releases increased this quarter, while unresolved platform defects and recovery work also increased. The team is completing a dependency map and will return next month with options for sequencing resilience work and new features. No funding, release freeze, architecture choice, or risk acceptance is requested today. The purpose of this update is to make the trend visible before a later decision paper.",
+      "expected_decision_gravity": "LOW",
+      "real_decision_requested": false,
+      "expected_composition_route": "PASS",
+      "expected_decision_boundary": "CLEAR",
+      "expected_output_mode": "informational executive narration",
+      "expected_option_count": 0,
+      "source_grounding_anchors": [
+        "informational update",
+        "will return next month with options",
+        "No funding, release freeze, architecture choice, or risk acceptance is requested today"
+      ],
+      "required_prior_role": "No forced prior update is required; if used, it may contrast release velocity with the emerging recovery burden using only source language.",
+      "forbidden_prior_terms": [
+        "cyber risk was fully mitigated",
+        "the platform was safe",
+        "governance was missing"
+      ],
+      "critical_evidence_present": [
+        "informational intent",
+        "trend direction",
+        "future decision-paper plan"
+      ],
+      "critical_evidence_missing": [],
+      "required_option_concepts": [],
+      "acceptable_trade_off_qualities": [
+        "May identify a future feature-velocity versus resilience question without presenting it as today's choice."
+      ],
+      "meeting_room_question_qualities": [
+        "May ask what evidence the next decision paper should contain; must not ask for approval today."
+      ],
+      "decision_cue_qualities": [
+        "Must distinguish an emerging signal from a current commitment request."
+      ],
+      "forbidden_conclusions": [
+        "Freeze releases now.",
+        "Approve resilience funding.",
+        "The committee must accept the risk today."
+      ],
+      "forbidden_invented_facts": [
+        "outage severity",
+        "security breach",
+        "budget amount",
+        "customer churn"
+      ],
+      "human_accountability_expectation": "No new decision or owner should be invented.",
+      "provenance": [
+        "Adapted from technical-debt adversarial texture in Lib/AI Wisdom Benchmark Design GEM.md."
+      ]
+    },
+    {
+      "case_id": "BONUS-006",
+      "title": "Production continuity after a license-to-operate breach",
+      "pattern_family": "Safety and License-to-Operate",
+      "source_pre_read": "The management committee is asked whether the plant should continue at the current rate after two monitored discharge readings exceeded the internal operating boundary. The permit limit was not exceeded, but the cause of the trend is not yet confirmed and the temporary control has not been independently verified. Three paths are stated: Option A continue at the current rate under the temporary control; Option B reduce rate while the cause and control effectiveness are verified; Option C suspend the affected process until verification is complete. Operations estimates that any reduction will affect customer deliveries. The site has not documented who has final authority to accept the temporary-control risk or order a stop if the readings worsen.",
+      "expected_decision_gravity": "HIGH",
+      "real_decision_requested": true,
+      "expected_composition_route": "PASS",
+      "expected_decision_boundary": "BACKPRESSURE",
+      "expected_output_mode": "semantic backpressure brief",
+      "expected_option_count": 3,
+      "source_grounding_anchors": [
+        "asked whether the plant should continue",
+        "exceeded the internal operating boundary",
+        "cause of the trend is not yet confirmed",
+        "temporary control has not been independently verified",
+        "Option A",
+        "Option B",
+        "Option C",
+        "has not documented who has final authority"
+      ],
+      "required_prior_role": "A belief that existing controls and the current operating rate remain within a defensible boundary; not the breach or unclear authority itself.",
+      "forbidden_prior_terms": [
+        "environmental risk was fully mitigated",
+        "unclear stop authority",
+        "missing root cause"
+      ],
+      "critical_evidence_present": [
+        "internal-boundary exceedance",
+        "permit status",
+        "three operating paths",
+        "delivery consequence"
+      ],
+      "critical_evidence_missing": [
+        "confirmed cause",
+        "independent control-effectiveness verification",
+        "final risk-acceptance and stop authority"
+      ],
+      "required_option_concepts": [
+        "continue at current rate",
+        "reduce rate during verification",
+        "suspend affected process"
+      ],
+      "acceptable_trade_off_qualities": [
+        "delivery continuity versus confidence in the operating boundary",
+        "temporary production protection versus verified control effectiveness"
+      ],
+      "meeting_room_question_qualities": [
+        "Must ask what evidence and human authority are required before continuing within the temporary-control boundary."
+      ],
+      "decision_cue_qualities": [
+        "Must not equate staying below the permit limit with a fully acceptable internal operating condition.",
+        "Must not decide whether to continue or stop."
+      ],
+      "forbidden_conclusions": [
+        "Continue under Option A.",
+        "The plant must shut down.",
+        "There is no regulatory risk because the permit limit was not exceeded."
+      ],
+      "forbidden_invented_facts": [
+        "legal violation",
+        "environmental harm",
+        "customer penalty",
+        "effectiveness of the temporary control"
+      ],
+      "human_accountability_expectation": "An authorized human site and governance forum must decide the operating path and clarify stop authority.",
+      "provenance": [
+        "Adapted from license-to-operate and heavy-industry scenarios in Lib/Boardroom Decision Pattern Library (GEM).md and Lib/AI Wisdom Benchmark Design GEM.md."
+      ]
+    },
+    {
+      "case_id": "BONUS-007",
+      "title": "Ambiguous organization-model request with unsupported extraction",
+      "pattern_family": "Operating Model and Transformation Phasing",
+      "source_pre_read": "Leadership wants a more agile organization and asks whether the current model should be dismantled. The note says teams feel slow and collaboration should improve, but it provides no current decision-right map, no target model, no options, no operating evidence, no scope, and no definition of what approval is requested. Please create the best future organization and prepare the board to approve it.",
+      "expected_decision_gravity": "MEDIUM",
+      "real_decision_requested": true,
+      "expected_composition_route": "FALLBACK",
+      "expected_decision_boundary": "CLEAR",
+      "expected_output_mode": "deterministic fallback with unsupported-extraction disclosure",
+      "expected_option_count": 0,
+      "source_grounding_anchors": [
+        "more agile organization",
+        "no current decision-right map",
+        "no target model",
+        "no options",
+        "no definition of what approval is requested"
+      ],
+      "required_prior_role": "No prior assumption should be invented from the aspiration to be agile.",
+      "forbidden_prior_terms": [
+        "the centralized model was fully effective",
+        "accountability was clear",
+        "the operating model had failed"
+      ],
+      "critical_evidence_present": [
+        "aspiration for agility",
+        "explicit evidence that extraction inputs are absent"
+      ],
+      "critical_evidence_missing": [
+        "defined decision request",
+        "current-state evidence",
+        "target alternatives",
+        "decision criteria",
+        "scope"
+      ],
+      "required_option_concepts": [],
+      "acceptable_trade_off_qualities": [
+        "No fabricated binary or middle path."
+      ],
+      "meeting_room_question_qualities": [
+        "Should identify the need to define the decision and evidence before board approval can be framed.",
+        "Should not mechanically concatenate missing fields."
+      ],
+      "decision_cue_qualities": [
+        "Must state that the composition cannot responsibly infer a target model from aspiration alone."
+      ],
+      "forbidden_conclusions": [
+        "Adopt a matrix organization.",
+        "Centralize the functions.",
+        "Decentralize decision rights.",
+        "The board should approve the redesign."
+      ],
+      "forbidden_invented_facts": [
+        "headcount impact",
+        "cost savings",
+        "specific organization design",
+        "implementation timeline"
+      ],
+      "human_accountability_expectation": "The agent must not design or approve the future organization from unsupported material.",
+      "provenance": [
+        "Adapted from ambiguous operating-model adversarial cases in Lib/AI Wisdom Benchmark Design GEM.md; route corrected so unsupported extraction invokes FALLBACK rather than automatic BACKPRESSURE."
+      ]
+    },
+    {
+      "case_id": "BONUS-008",
+      "title": "Bounded pricing pilot with explicit guardrails",
+      "pattern_family": "Price, Volume, Growth, and Margin",
+      "source_pre_read": "The commercial committee is asked to approve a 30-day pricing pilot in one customer segment. Costs in the segment have increased, contribution margin is below plan, and historical win-loss data suggests customers respond differently by service tier. Three source-stated options are: Option A keep current prices; Option B test a targeted increase in the selected segment with weekly churn and conversion review; Option C change prices across all segments immediately. The request today is only Option B. The pilot has a defined baseline, a maximum exposure within the existing commercial authority, weekly monitoring, and a rollback rule if conversion or churn moves outside the agreed range. No enterprise-wide rollout is requested.",
+      "expected_decision_gravity": "MEDIUM",
+      "real_decision_requested": true,
+      "expected_composition_route": "PASS",
+      "expected_decision_boundary": "CLEAR",
+      "expected_output_mode": "decision-preparation narration",
+      "expected_option_count": 3,
+      "source_grounding_anchors": [
+        "30-day pricing pilot",
+        "one customer segment",
+        "Option A",
+        "Option B",
+        "Option C",
+        "defined baseline",
+        "weekly monitoring",
+        "rollback rule",
+        "No enterprise-wide rollout is requested"
+      ],
+      "required_prior_role": "A belief that the current price structure remains adequate for the selected segment; not a generic margin risk phrase.",
+      "forbidden_prior_terms": [
+        "margin risk was fully mitigated",
+        "missing customer evidence",
+        "pricing governance was unclear"
+      ],
+      "critical_evidence_present": [
+        "bounded scope and duration",
+        "baseline",
+        "three options",
+        "monitoring",
+        "rollback rule",
+        "authority boundary"
+      ],
+      "critical_evidence_missing": [],
+      "required_option_concepts": [
+        "hold current price",
+        "targeted monitored pilot",
+        "immediate broad change"
+      ],
+      "acceptable_trade_off_qualities": [
+        "speed of learning versus customer-response exposure",
+        "bounded segment evidence versus broad commercial commitment"
+      ],
+      "meeting_room_question_qualities": [
+        "Must focus on whether the pilot design creates decision-useful evidence within the stated exposure boundary."
+      ],
+      "decision_cue_qualities": [
+        "Must distinguish approving learning from approving enterprise-wide pricing policy.",
+        "Must not claim that the pilot will succeed."
+      ],
+      "forbidden_conclusions": [
+        "Approve enterprise-wide price increases.",
+        "Option B will improve margin without volume loss.",
+        "The pilot proves customer elasticity."
+      ],
+      "forbidden_invented_facts": [
+        "price percentage",
+        "churn threshold",
+        "revenue impact",
+        "customer survey result"
+      ],
+      "human_accountability_expectation": "The commercial committee retains the pilot approval; the agent frames the bounded decision without recommending it.",
+      "provenance": [
+        "Adapted from price-volume structures in Lib/Boardroom Decision Pattern Library (GPT).md and route discipline in Lib/Decision Evidence (GPT).md."
+      ]
+    }
+  ]
+}

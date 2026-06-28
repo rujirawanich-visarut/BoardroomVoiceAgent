@@ -1,0 +1,1 @@
+The Q4 targets require pushing the production lines to 110% capacity. However, recent safety reports show that operating above 100% capacity exceeds the thermal limit of the plant and increases risk of a severe shutdown. We recommend pushing for the target to ensure we hit revenue goals.

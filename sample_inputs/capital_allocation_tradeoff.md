@@ -1,0 +1,1 @@
+We are proposing to invest $50M in the new platform. This will drive future growth, but it requires cutting the Q3 marketing budget by 30%. The Board must approve this capital allocation. This is a win-win scenario, as we secure the future without major disruption.

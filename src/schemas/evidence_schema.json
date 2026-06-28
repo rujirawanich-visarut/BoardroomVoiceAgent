@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://boardroomvoiceagent.local/schemas/evidence_schema.json",
+  "title": "EvidenceSchema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "facts",
+    "assumptions",
+    "inferences",
+    "risks",
+    "missing_evidence",
+    "evidence",
+    "insight",
+    "conclusion",
+    "choice",
+    "prior_assumption",
+    "new_baseline",
+    "options",
+    "meeting_room_question",
+    "one_line_decision_cue",
+    "semantic_backpressure_required"
+  ],
+  "properties": {
+    "facts": {"$ref": "#/$defs/stringArray"},
+    "assumptions": {"$ref": "#/$defs/stringArray"},
+    "inferences": {"$ref": "#/$defs/stringArray"},
+    "risks": {"$ref": "#/$defs/stringArray"},
+    "missing_evidence": {"$ref": "#/$defs/stringArray"},
+    "evidence": {"$ref": "#/$defs/nonEmptyString"},
+    "insight": {"$ref": "#/$defs/nonEmptyString"},
+    "conclusion": {"$ref": "#/$defs/nonEmptyString"},
+    "choice": {"$ref": "#/$defs/nonEmptyString"},
+    "prior_assumption": {"$ref": "#/$defs/nonEmptyString"},
+    "new_baseline": {"$ref": "#/$defs/nonEmptyString"},
+    "options": {"$ref": "#/$defs/stringArray"},
+    "meeting_room_question": {"$ref": "#/$defs/nonEmptyString"},
+    "one_line_decision_cue": {"$ref": "#/$defs/nonEmptyString"},
+    "semantic_backpressure_required": {"type": "boolean"},
+    "backpressure_reason": {"type": "string"}
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/nonEmptyString"},
+      "uniqueItems": true
+    }
+  }
+}

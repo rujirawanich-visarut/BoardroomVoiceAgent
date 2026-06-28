@@ -1,0 +1,1 @@
+We recommend full rollout of the new software. We expect good results and team alignment. The ROI is not yet fully measured, and user adoption data is missing, but we should proceed anyway for alignment.
