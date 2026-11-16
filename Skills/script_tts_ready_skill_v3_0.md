@@ -763,6 +763,24 @@ If the material is not decision-grade, use normal TTS-ready executive narration 
 
 ---
 
+## 14A. Executive Culture / Alignment Talk & Recorded TTS Calibration
+
+Activate this calibration when Decision Gravity is **Low or Medium** and the user requests an **executive culture talk, leadership alignment briefing, or recorded asynchronous slide narration** (for example, Middle Management GRC enablement). Keep High-Gravity Boardroom Pre-read rules intact when formal Board/Committee decisions are required.
+
+1. **Deck-Role & Scope Gate:** Before narrating a single slide, identify or ask for its intended role in the presentation pack (`Introduce / Explain / Challenge / Transition / Demonstrate / Invite Decision`). Stay strictly inside that slide's scope; do not leak system architecture or downstream commitments reserved for later slides unless supplied by the user.
+2. **Source-Grounded Expansion Boundary:** Keep a strict internal boundary between *slide-grounded content* (verified facts, terms, examples), *narrative interpretation* (causal bridges connecting the slide to audience choices), and *constructive tension* (the cost of inaction vs. proactive discipline). Never inject unverified brand prefixes, external deck acronyms, or invented metrics (`AGENTS.md` Rule 1 & Section 10).
+3. **Challenge the Work Pattern, Not the Person:** Confront reactive structures, habits, and workflows rather than blaming listeners personally (e.g., challenge *"reactive risk workflows"* rather than *"most managers here treat GRC reactively"*). Frame the trade-off and close with **leadership agency and concrete first steps**, not guilt.
+4. **Accountability Language Calibration:** Default to **leadership accountability phrasing** (e.g., *"exercise judgment and retain ownership of the final decision"* / *"ใช้วิจารณญาณและถือความรับผิดชอบต่อการตัดสินใจขั้นสุดท้าย"*). Use liability/compliance sign-off phrasing (e.g., *"sign off liability"* / *"ลงชื่อรับผิดชอบ"*) only when explicitly requested or required by High-Gravity governance constraints.
+5. **Causal-Pathway Precision:** In cause-and-effect examples (e.g., macro signal → operational risk), clarify that the flaw is **skipping the transmission mechanism / causal pathway** before scoring or concluding, rather than sounding as if the underlying domain relationship itself is invalid.
+6. **Single-Entity Consistency:** Select one canonical system or concept name from the confirmed source (e.g., `Risk Intelligence AI` contrasted cleanly against `Chatbot`) and use it consistently throughout the spoken script without mixing aliases.
+7. **Recorded Async TTS Optimization (TH / Bilingual):**
+   - **Duration:** Target **2–3 minutes per standalone slide** unless the user specifies another limit (such as `<= 5 minutes`).
+   - **Sentence & Pause Flow:** Alternate crisp short statements with medium explanatory sentences; place `[PAUSE 1.0s]` or `[PAUSE 1.5s]` after strategic tension and before the closing question.
+   - **Terminology & Phonetic Normalization:** Anchor unfamiliar English terms naturally in the speaker's language on first use; normalize slide OCR/font typos into accurate spoken/TTS spelling while preserving source intent (e.g., Thai TTS spelling `เอลนีโญ` instead of slide font typo `เอลณีโญ`).
+   - **Question Discipline:** Never chain more than two challenging questions consecutively; end with one memorable cue and one focused reflection/meeting question.
+
+---
+
 ## 15. Boardroom Silent Internal Audit
 
 Before finalizing a Boardroom Voice Agent script, run this checklist.
@@ -780,6 +798,14 @@ Before finalizing a Boardroom Voice Agent script, run this checklist.
 [ ] No vague pointers: Are major transitions explicit?
 [ ] Clean-read version ready: Can the script work if pause tags are not supported?
 [ ] Meeting room question clear: Does the script identify what executives should discuss?
+
+If Executive Culture / Recorded Slide Talk Mode is active:
+[ ] Deck scope respected: Does the narration fit this slide's role without leaking unconfirmed deck context?
+[ ] Pattern over person: Does tension target work patterns/structures rather than blaming listeners?
+[ ] Accountability calibrated: Does closing emphasize leadership ownership (not liability) unless requested?
+[ ] Causal pathway clear: Do examples warn against skipping causal mechanisms without denying valid links?
+[ ] Entity consistent: Is one canonical system name used consistently?
+[ ] Recorded TTS tuned: Are typos normalized for TTS (e.g., เอลนีโญ), English terms anchored on first use, consecutive questions <= 2, and pacing within 2-3 min/slide (or user limit)?
 ```
 
 ---
